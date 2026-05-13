@@ -1,0 +1,247 @@
+{
+  "per_candidate_us": {
+    "SW-PCM-host": {
+      "meta_wait": 2.0,
+      "scoring": 1.1,
+      "submit": 42.5,
+      "contention": 0.0,
+      "note": "MMIO doorbell + OS crossing + completion"
+    },
+    "SW-PCM-GPU": {
+      "meta_wait": 2.0,
+      "scoring": 0.9,
+      "submit": 0.3,
+      "contention": 2.0,
+      "note": "persistent kernel polls metadata queue"
+    },
+    "IOMMU-filter": {
+      "meta_wait": 2.0,
+      "scoring": 1.4,
+      "submit": 6.8,
+      "contention": 0.3,
+      "note": "DPU/IOMMU side-car with private doorbell"
+    },
+    "CEFE": {
+      "meta_wait": 1.5,
+      "scoring": 0.4,
+      "submit": 0.3,
+      "contention": 0.0,
+      "note": "hardware in-line filter on CE front-end"
+    }
+  },
+  "concurrency_sweep": {
+    "SW-PCM-host": [
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.1,
+        "submit": 42.5,
+        "contention": 0.0,
+        "note": "MMIO doorbell + OS crossing + completion"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.1,
+        "submit": 44.0,
+        "contention": 0.0,
+        "note": "MMIO doorbell + OS crossing + completion"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.1,
+        "submit": 45.098076211353316,
+        "contention": 0.0,
+        "note": "MMIO doorbell + OS crossing + completion"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.1,
+        "submit": 46.46862696659689,
+        "contention": 0.0,
+        "note": "MMIO doorbell + OS crossing + completion"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.1,
+        "submit": 48.30947501931112,
+        "contention": 0.0,
+        "note": "MMIO doorbell + OS crossing + completion"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.1,
+        "submit": 49.69374728496908,
+        "contention": 0.0,
+        "note": "MMIO doorbell + OS crossing + completion"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.1,
+        "submit": 50.85164654424503,
+        "contention": 0.0,
+        "note": "MMIO doorbell + OS crossing + completion"
+      }
+    ],
+    "SW-PCM-GPU": [
+      {
+        "meta_wait": 2.0,
+        "scoring": 0.9,
+        "submit": 0.3,
+        "contention": 2.0,
+        "note": "persistent kernel polls metadata queue"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 0.9,
+        "submit": 0.3,
+        "contention": 2.9,
+        "note": "persistent kernel polls metadata queue"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 0.9,
+        "submit": 0.3,
+        "contention": 3.8,
+        "note": "persistent kernel polls metadata queue"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 0.9,
+        "submit": 0.3,
+        "contention": 4.7,
+        "note": "persistent kernel polls metadata queue"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 0.9,
+        "submit": 0.3,
+        "contention": 5.6,
+        "note": "persistent kernel polls metadata queue"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 0.9,
+        "submit": 0.3,
+        "contention": 6.126466250649041,
+        "note": "persistent kernel polls metadata queue"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 0.9,
+        "submit": 0.3,
+        "contention": 6.5,
+        "note": "persistent kernel polls metadata queue"
+      }
+    ],
+    "IOMMU-filter": [
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.4,
+        "submit": 6.8,
+        "contention": 0.3,
+        "note": "DPU/IOMMU side-car with private doorbell"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.4,
+        "submit": 6.8,
+        "contention": 0.3,
+        "note": "DPU/IOMMU side-car with private doorbell"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.4,
+        "submit": 6.8,
+        "contention": 0.3,
+        "note": "DPU/IOMMU side-car with private doorbell"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.4,
+        "submit": 6.8,
+        "contention": 0.3,
+        "note": "DPU/IOMMU side-car with private doorbell"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.4,
+        "submit": 14.07543951924991,
+        "contention": 0.3,
+        "note": "DPU/IOMMU side-car with private doorbell"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.4,
+        "submit": 23.51457081528558,
+        "contention": 0.3,
+        "note": "DPU/IOMMU side-car with private doorbell"
+      },
+      {
+        "meta_wait": 2.0,
+        "scoring": 1.4,
+        "submit": 33.98972032529317,
+        "contention": 0.3,
+        "note": "DPU/IOMMU side-car with private doorbell"
+      }
+    ],
+    "CEFE": [
+      {
+        "meta_wait": 1.5,
+        "scoring": 0.4,
+        "submit": 0.3,
+        "contention": 0.0,
+        "note": "hardware in-line filter on CE front-end"
+      },
+      {
+        "meta_wait": 1.5,
+        "scoring": 0.4,
+        "submit": 0.3,
+        "contention": 0.0,
+        "note": "hardware in-line filter on CE front-end"
+      },
+      {
+        "meta_wait": 1.5,
+        "scoring": 0.4,
+        "submit": 0.3,
+        "contention": 0.0,
+        "note": "hardware in-line filter on CE front-end"
+      },
+      {
+        "meta_wait": 1.5,
+        "scoring": 0.4,
+        "submit": 0.3,
+        "contention": 0.0,
+        "note": "hardware in-line filter on CE front-end"
+      },
+      {
+        "meta_wait": 1.5,
+        "scoring": 0.4,
+        "submit": 0.3,
+        "contention": 0.0,
+        "note": "hardware in-line filter on CE front-end"
+      },
+      {
+        "meta_wait": 1.5,
+        "scoring": 0.4,
+        "submit": 0.7924577653379666,
+        "contention": 0.0,
+        "note": "hardware in-line filter on CE front-end"
+      },
+      {
+        "meta_wait": 1.5,
+        "scoring": 0.4,
+        "submit": 1.3556063286183158,
+        "contention": 0.0,
+        "note": "hardware in-line filter on CE front-end"
+      }
+    ]
+  },
+  "streams": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    24,
+    32
+  ]
+}

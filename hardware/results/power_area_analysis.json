@@ -1,0 +1,56 @@
+{
+  "technology": "TSMC 4nm N4P ULVT",
+  "total_area_um2": 19443.848,
+  "total_area_mm2": 0.019443848000000003,
+  "total_power_mw": 24.889200000000002,
+  "dynamic_power_mw": 22.7892,
+  "static_power_mw": 2.1,
+  "components": [
+    {
+      "name": "Register File (1024\u00d720)",
+      "num_dff": 20480,
+      "area_um2": 16704.0,
+      "area_mm2": 0.016704,
+      "power_dynamic_mw": 16.384,
+      "percentage": 85.90892090907107
+    },
+    {
+      "name": "EMA Computation Unit",
+      "num_gates": 2500,
+      "area_um2": 376.4,
+      "area_mm2": 0.0003764,
+      "power_dynamic_mw": 0.75,
+      "percentage": 1.9358308087987517
+    },
+    {
+      "name": "Control & Statistics",
+      "num_gates": 800,
+      "area_um2": 276.8,
+      "area_mm2": 0.0002768,
+      "power_dynamic_mw": 0.24,
+      "percentage": 1.423586524642653
+    },
+    {
+      "name": "Clocking (ICG + Tree)",
+      "area_um2": 37.0,
+      "area_mm2": 3.7e-05,
+      "power_dynamic_mw": 4.9152,
+      "percentage": 0.1902915513431292
+    },
+    {
+      "name": "Interconnect (12% overhead)",
+      "area_um2": 2049.648,
+      "area_mm2": 0.0020496480000000003,
+      "power_dynamic_mw": 0.5,
+      "percentage": 10.54137020614438
+    }
+  ],
+  "gpu_overhead": {
+    "NVIDIA RTX 4090 (AD102)": 0.0031980013157894747,
+    "NVIDIA RTX 4080 (AD103)": 0.005130302902374671,
+    "NVIDIA RTX 4070 (AD104)": 0.006591134915254238,
+    "AMD RX 7900 XTX (Navi 31)": 0.003661741619585688,
+    "AMD RX 7800 XT (Navi 32)": 0.005555385142857144,
+    "Mid-range Target": 0.006481282666666668
+  }
+}

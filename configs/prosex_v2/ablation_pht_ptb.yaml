@@ -1,0 +1,8 @@
+# Ablation: PHT + PTB (full system)
+# Both history-based prediction and speculative prefetch enabled
+ppu:
+  pht_enabled: true
+  ptb_enabled: true
+  pht_as_5th_feature: true
+  ptb_speculative_prefetch: true
+experiment_name: "ablation_pht_ptb"

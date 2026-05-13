@@ -1,0 +1,206 @@
+{
+  "C2_fts_baselines": {
+    "baseline": [
+      {
+        "label": "FTS-none",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.0,
+        "rpe_mbs": 5242.880000000001
+      },
+      {
+        "label": "FTS-LRU",
+        "tok_per_s": 83.2090744488231,
+        "recovery": 0.1787109375,
+        "rpe_mbs": 1325.125146447971
+      },
+      {
+        "label": "FTS-FreqRec",
+        "tok_per_s": 83.08518557907051,
+        "recovery": 0.19466145833333334,
+        "rpe_mbs": 1323.1521854727216
+      },
+      {
+        "label": "FTS-Quest-prefilter",
+        "tok_per_s": 81.86628942680498,
+        "recovery": 0.11604817708333333,
+        "rpe_mbs": 1303.7409619616474
+      },
+      {
+        "label": "SW-PCM-host",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.3819986979166667,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "SW-PCM-GPU",
+        "tok_per_s": 83.05427098283101,
+        "recovery": 0.3819986979166667,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "IOMMU-filter",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.3819986979166667,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "PROSE (CEFE)",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.3819986979166667,
+        "rpe_mbs": 0.0
+      }
+    ],
+    "stressed": [
+      {
+        "label": "FTS-none",
+        "tok_per_s": 48.12964354800952,
+        "recovery": 0.0,
+        "rpe_mbs": 6257.981050011706
+      },
+      {
+        "label": "FTS-LRU",
+        "tok_per_s": 83.08518557907051,
+        "recovery": 0.106201171875,
+        "rpe_mbs": 3000.2339678825906
+      },
+      {
+        "label": "FTS-FreqRec",
+        "tok_per_s": 82.83851129254585,
+        "recovery": 0.11873372395833333,
+        "rpe_mbs": 2991.3264765136246
+      },
+      {
+        "label": "FTS-Quest-prefilter",
+        "tok_per_s": 80.45000514880032,
+        "recovery": 0.064453125,
+        "rpe_mbs": 2905.0767171249095
+      },
+      {
+        "label": "SW-PCM-host",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.2611490885416667,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "SW-PCM-GPU",
+        "tok_per_s": 82.77707141343504,
+        "recovery": 0.2611490885416667,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "IOMMU-filter",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.2611490885416667,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "PROSE (CEFE)",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.2611490885416667,
+        "rpe_mbs": 0.0
+      }
+    ],
+    "pathological": [
+      {
+        "label": "FTS-none",
+        "tok_per_s": 14.062944389042693,
+        "recovery": 0.0,
+        "rpe_mbs": 3716.0086258725773
+      },
+      {
+        "label": "FTS-LRU",
+        "tok_per_s": 41.30931356478886,
+        "recovery": 0.06290690104166667,
+        "rpe_mbs": 3153.942957456033
+      },
+      {
+        "label": "FTS-FreqRec",
+        "tok_per_s": 41.18735567950569,
+        "recovery": 0.07096354166666667,
+        "rpe_mbs": 3144.631541211079
+      },
+      {
+        "label": "FTS-Quest-prefilter",
+        "tok_per_s": 40.00624737559018,
+        "recovery": 0.031087239583333332,
+        "rpe_mbs": 3054.45458362778
+      },
+      {
+        "label": "SW-PCM-host",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.17789713541666666,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "SW-PCM-GPU",
+        "tok_per_s": 82.22818650668351,
+        "recovery": 0.17789713541666666,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "IOMMU-filter",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.17789713541666666,
+        "rpe_mbs": 0.0
+      },
+      {
+        "label": "PROSE (CEFE)",
+        "tok_per_s": 83.33333333333334,
+        "recovery": 0.17789713541666666,
+        "rpe_mbs": 0.0
+      }
+    ]
+  },
+  "C3_margin_decomposition": {
+    "delta_recov_scorer": 0.201904296875,
+    "delta_recov_ordering": 0.0,
+    "delta_tokps_scorer": 0.796168714581853,
+    "delta_tokps_ordering": 2.0871594699511746
+  },
+  "C4_area_power": {
+    "total_area_mm2": 0.0322,
+    "total_power_mW": 23.8
+  },
+  "C5_admission_us_1stream": {
+    "SW-PCM-host": 45.6,
+    "SW-PCM-GPU": 5.2,
+    "IOMMU-filter": 10.5,
+    "CEFE": 2.2
+  },
+  "C6_lssl_freshness": {
+    "no_lssl": {
+      "fresh": 0.130242919921875,
+      "stale_admit": 0.8685859375
+    },
+    "stale_keep": {
+      "fresh": 0.130242919921875,
+      "stale_admit": 0.8685859375
+    },
+    "lssl_drop": {
+      "fresh": 0.130242919921875,
+      "stale_admit": 0.4878515625
+    },
+    "lssl_refresh": {
+      "fresh": 0.305140869140625,
+      "stale_admit": 0.434734375
+    }
+  },
+  "C7_max_rho_meta_1024cand": 0.0006408399617546712,
+  "C8_absolute_ceilings": {
+    "RULER-NIAH": 0.78,
+    "RULER-multi-NIAH": 0.65,
+    "LongBench-QA": 0.72,
+    "LongBench-Summ": 0.68
+  },
+  "C10_at_4GBs": {
+    "prose_useful_mbs": 84.62933333333334,
+    "prose_rpe_mbs": 0.0,
+    "fts_useful_mbs": 25.652310594152784,
+    "fts_rpe_mbs": 1303.7409619616474
+  },
+  "C11_worst_degradation": {
+    "weighted": 0.9210526315789475,
+    "global": 4.874999999999999,
+    "per_namespace": 1.0
+  }
+}

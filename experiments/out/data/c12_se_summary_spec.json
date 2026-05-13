@@ -1,0 +1,66 @@
+{
+  "description": "Summary Engine emits 64 B per KV chunk. Layout is packed and namespace-sealed.",
+  "fields": [
+    {
+      "name": "key_centroid[32]",
+      "bits": 256,
+      "encoding": "int8, sign-preserving per-head centroid quantisation",
+      "purpose": "input to c_sem dot product with query sketch"
+    },
+    {
+      "name": "key_norm",
+      "bits": 8,
+      "encoding": "log2 of key L2-norm, quantised to [0,255]",
+      "purpose": "allows scorer to scale c_sem by key magnitude"
+    },
+    {
+      "name": "value_norm",
+      "bits": 8,
+      "encoding": "log2 of value L2-norm, quantised to [0,255]",
+      "purpose": "feeds c_press via output activation magnitude"
+    },
+    {
+      "name": "write_version",
+      "bits": 64,
+      "encoding": "monotonically increasing 64-bit counter, bumped on every WriteSketch",
+      "purpose": "commit-time verification against MetaRead-time version"
+    },
+    {
+      "name": "block_id",
+      "bits": 64,
+      "encoding": "64-bit canonical chunk id",
+      "purpose": "namespace-keyed descriptor validation"
+    },
+    {
+      "name": "structural_flags",
+      "bits": 8,
+      "encoding": "bitset {is_boundary, is_title_adj, is_code, ...}",
+      "purpose": "c_struct"
+    },
+    {
+      "name": "last_access_tick",
+      "bits": 64,
+      "encoding": "decode-step counter",
+      "purpose": "c_temp"
+    },
+    {
+      "name": "history_counter",
+      "bits": 16,
+      "encoding": "saturating counter of successful commits",
+      "purpose": "c_hist"
+    },
+    {
+      "name": "reserved",
+      "bits": 8,
+      "encoding": "zero-padding for 64 B alignment",
+      "purpose": "future extension / alignment"
+    },
+    {
+      "name": "crc",
+      "bits": 16,
+      "encoding": "CRC-16 over the preceding 62 bytes",
+      "purpose": "SE-side integrity check"
+    }
+  ],
+  "total_bits": 512
+}

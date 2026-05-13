@@ -1,0 +1,125 @@
+{
+  "rows": [
+    {
+      "neighbor_admission_us": 57.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 0.890625,
+      "neighbor_credits": 35.92982456140351,
+      "policy": "global",
+      "adversary_hz": 5
+    },
+    {
+      "neighbor_admission_us": 60.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 0.9375,
+      "neighbor_credits": 34.13333333333333,
+      "policy": "global",
+      "adversary_hz": 20
+    },
+    {
+      "neighbor_admission_us": 72.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 1.125,
+      "neighbor_credits": 28.444444444444446,
+      "policy": "global",
+      "adversary_hz": 80
+    },
+    {
+      "neighbor_admission_us": 120.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 1.875,
+      "neighbor_credits": 17.066666666666666,
+      "policy": "global",
+      "adversary_hz": 320
+    },
+    {
+      "neighbor_admission_us": 311.99999999999994,
+      "base_admission_us": 64.0,
+      "degradation_factor": 4.874999999999999,
+      "neighbor_credits": 6.564102564102565,
+      "policy": "global",
+      "adversary_hz": 1280
+    },
+    {
+      "neighbor_admission_us": 64.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 1.0,
+      "neighbor_credits": 32.0,
+      "policy": "per_namespace",
+      "adversary_hz": 5
+    },
+    {
+      "neighbor_admission_us": 64.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 1.0,
+      "neighbor_credits": 32.0,
+      "policy": "per_namespace",
+      "adversary_hz": 20
+    },
+    {
+      "neighbor_admission_us": 64.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 1.0,
+      "neighbor_credits": 32.0,
+      "policy": "per_namespace",
+      "adversary_hz": 80
+    },
+    {
+      "neighbor_admission_us": 64.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 1.0,
+      "neighbor_credits": 32.0,
+      "policy": "per_namespace",
+      "adversary_hz": 320
+    },
+    {
+      "neighbor_admission_us": 64.0,
+      "base_admission_us": 64.0,
+      "degradation_factor": 1.0,
+      "neighbor_credits": 32.0,
+      "policy": "per_namespace",
+      "adversary_hz": 1280
+    },
+    {
+      "neighbor_admission_us": 58.94736842105264,
+      "base_admission_us": 64.0,
+      "degradation_factor": 0.9210526315789475,
+      "neighbor_credits": 34.74285714285714,
+      "policy": "weighted",
+      "adversary_hz": 5
+    },
+    {
+      "neighbor_admission_us": 58.94736842105264,
+      "base_admission_us": 64.0,
+      "degradation_factor": 0.9210526315789475,
+      "neighbor_credits": 34.74285714285714,
+      "policy": "weighted",
+      "adversary_hz": 20
+    },
+    {
+      "neighbor_admission_us": 58.94736842105264,
+      "base_admission_us": 64.0,
+      "degradation_factor": 0.9210526315789475,
+      "neighbor_credits": 34.74285714285714,
+      "policy": "weighted",
+      "adversary_hz": 80
+    },
+    {
+      "neighbor_admission_us": 58.94736842105264,
+      "base_admission_us": 64.0,
+      "degradation_factor": 0.9210526315789475,
+      "neighbor_credits": 34.74285714285714,
+      "policy": "weighted",
+      "adversary_hz": 320
+    },
+    {
+      "neighbor_admission_us": 58.94736842105264,
+      "base_admission_us": 64.0,
+      "degradation_factor": 0.9210526315789475,
+      "neighbor_credits": 34.74285714285714,
+      "policy": "weighted",
+      "adversary_hz": 1280
+    }
+  ],
+  "n_tenants": 8
+}

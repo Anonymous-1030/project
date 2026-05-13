@@ -1,0 +1,11 @@
+# Ablation: No Sticky Residency
+
+version: "2.0.0"
+experiment_name: "ablation_no_sticky"
+
+# Sticky disabled
+burst:
+  sticky_enabled: false
+  default_ttl: 0
+
+# Inherit other defaults from default.yaml

@@ -1,0 +1,13 @@
+# Ablation: Single Queue ULF (Baseline Comparison)
+
+version: "2.0.0"
+experiment_name: "ablation_single_queue"
+
+# Only lexical overlap queue enabled
+mqr_ulf:
+  anchor_neighbor_enabled: false
+  lexical_overlap_enabled: true
+  structural_recency_enabled: false
+  historical_success_enabled: false
+
+# Inherit other defaults from default.yaml

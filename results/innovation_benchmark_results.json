@@ -1,0 +1,611 @@
+{
+  "32 GB/s (high BW)": {
+    "ctx_4096": {
+      "context_length": 4096,
+      "bandwidth_gbps": 32.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.0,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 1.0,
+        "avg_latency_us": 213.5296737670899,
+        "avg_throughput_ratio": 1.9722124590160544,
+        "p99_latency_us": 437.4500190734861
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.52,
+        "avg_gold_recall_candidates": 0.02,
+        "avg_visible_count": 3.2,
+        "avg_latency_us": 174.5497625732422,
+        "avg_throughput_ratio": 2.547387476463313,
+        "p99_latency_us": 617.9587646484374,
+        "avg_ghost_blocks": 7.0,
+        "aba_metrics": {
+          "mode_switches": 1,
+          "transparent_fraction": 0.96,
+          "hybrid_fraction": 0.04,
+          "aggressive_fraction": 0.0,
+          "compute_savings_flops": 15728640.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 2,
+          "total_chunks_scored": 8,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.09753639876842499,
+          "semantic_improvements": 1,
+          "avg_scoring_latency_us": 98.22845458984375,
+          "simhash_baseline_admits": 7,
+          "hes_additional_admits": 1,
+          "hes_lift_over_simhash": 0.14285714285714285
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 7,
+          "ghosts_promoted_to_real": 0,
+          "ghosts_evicted": 0,
+          "avg_ghost_confidence": 0.010581885523029737,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.5,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 2,
+          "avg_acceptance_rate": 0.5911489609336256,
+          "avg_evidence_quality": 0.0,
+          "drift_corrections": 0,
+          "promotion_overrides": 2,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 10,
+          "total_accepted_tokens": 5
+        }
+      },
+      "improvements": {
+        "recall_lift": 52.0,
+        "throughput_lift": 0.29163948073536455,
+        "latency_reduction": 0.18255032429996365,
+        "visible_count_change": 2.2
+      }
+    },
+    "ctx_8192": {
+      "context_length": 8192,
+      "bandwidth_gbps": 32.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.25,
+        "avg_gold_recall_candidates": 0.0,
+        "avg_visible_count": 4.08,
+        "avg_latency_us": 387.54780969238277,
+        "avg_throughput_ratio": 2.158791457587423,
+        "p99_latency_us": 725.8057970886223
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.26,
+        "avg_gold_recall_candidates": 0.0,
+        "avg_visible_count": 5.2,
+        "avg_latency_us": 278.7855856323242,
+        "avg_throughput_ratio": 3.0738485530292574,
+        "p99_latency_us": 735.4482765197753,
+        "avg_ghost_blocks": 8.0,
+        "aba_metrics": {
+          "mode_switches": 1,
+          "transparent_fraction": 0.96,
+          "hybrid_fraction": 0.04,
+          "aggressive_fraction": 0.0,
+          "compute_savings_flops": 34603008.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 2,
+          "total_chunks_scored": 8,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.10349756240844726,
+          "semantic_improvements": 0,
+          "avg_scoring_latency_us": 67.23403930664062,
+          "simhash_baseline_admits": 8,
+          "hes_additional_admits": 0,
+          "hes_lift_over_simhash": 0.0
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 8,
+          "ghosts_promoted_to_real": 0,
+          "ghosts_evicted": 0,
+          "avg_ghost_confidence": 0.01050914983265102,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.5,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 2,
+          "avg_acceptance_rate": 0.6048281196583285,
+          "avg_evidence_quality": 0.0,
+          "drift_corrections": 0,
+          "promotion_overrides": 0,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 10,
+          "total_accepted_tokens": 5
+        }
+      },
+      "improvements": {
+        "recall_lift": 0.040000000000000036,
+        "throughput_lift": 0.42387470648251724,
+        "latency_reduction": 0.2806420816734557,
+        "visible_count_change": 1.12
+      }
+    },
+    "ctx_16384": {
+      "context_length": 16384,
+      "bandwidth_gbps": 32.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.25,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 7.0,
+        "avg_latency_us": 591.6162857055665,
+        "avg_throughput_ratio": 2.774705045494191,
+        "p99_latency_us": 690.5051597595213
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.26,
+        "avg_gold_recall_candidates": 0.02,
+        "avg_visible_count": 11.06,
+        "avg_latency_us": 585.6840407104492,
+        "avg_throughput_ratio": 2.829710010555543,
+        "p99_latency_us": 963.0398854370114,
+        "avg_ghost_blocks": 8.0,
+        "aba_metrics": {
+          "mode_switches": 1,
+          "transparent_fraction": 0.96,
+          "hybrid_fraction": 0.04,
+          "aggressive_fraction": 0.0,
+          "compute_savings_flops": 66060288.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 2,
+          "total_chunks_scored": 12,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.09693714141845704,
+          "semantic_improvements": 0,
+          "avg_scoring_latency_us": 85.35385131835938,
+          "simhash_baseline_admits": 12,
+          "hes_additional_admits": 0,
+          "hes_lift_over_simhash": 0.0
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 8,
+          "ghosts_promoted_to_real": 0,
+          "ghosts_evicted": 0,
+          "avg_ghost_confidence": 0.01050914983265102,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.5,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 2,
+          "avg_acceptance_rate": 0.4713286385412182,
+          "avg_evidence_quality": 0.0,
+          "drift_corrections": 0,
+          "promotion_overrides": 0,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 10,
+          "total_accepted_tokens": 4
+        }
+      },
+      "improvements": {
+        "recall_lift": 0.040000000000000036,
+        "throughput_lift": 0.01982371609215685,
+        "latency_reduction": 0.010027183393105044,
+        "visible_count_change": 4.0600000000000005
+      }
+    }
+  },
+  "8 GB/s (medium BW)": {
+    "ctx_4096": {
+      "context_length": 4096,
+      "bandwidth_gbps": 8.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.0,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 1.0,
+        "avg_latency_us": 202.1952545166016,
+        "avg_throughput_ratio": 2.0382928164396397,
+        "p99_latency_us": 259.48723907470696
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.41,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 5.64,
+        "avg_latency_us": 449.2713874511719,
+        "avg_throughput_ratio": 0.9212094919239676,
+        "p99_latency_us": 593.930940246582,
+        "avg_ghost_blocks": 6.76,
+        "aba_metrics": {
+          "mode_switches": 0,
+          "transparent_fraction": 0.0,
+          "hybrid_fraction": 1.0,
+          "aggressive_fraction": 0.0,
+          "compute_savings_flops": 0.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 50,
+          "total_chunks_scored": 200,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.490350467570246,
+          "semantic_improvements": 30,
+          "avg_scoring_latency_us": 59.490203857421875,
+          "simhash_baseline_admits": 170,
+          "hes_additional_admits": 30,
+          "hes_lift_over_simhash": 0.17647058823529413
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 19,
+          "ghosts_promoted_to_real": 4,
+          "ghosts_evicted": 12,
+          "avg_ghost_confidence": 0.041332775091659814,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.1,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 50,
+          "avg_acceptance_rate": 0.5798499153272669,
+          "avg_evidence_quality": 0.026666666666666665,
+          "drift_corrections": 0,
+          "promotion_overrides": 22,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 250,
+          "total_accepted_tokens": 119
+        }
+      },
+      "improvements": {
+        "recall_lift": 41.0,
+        "throughput_lift": -0.5480485019158937,
+        "latency_reduction": -1.2219680106996957,
+        "visible_count_change": 4.64
+      }
+    },
+    "ctx_8192": {
+      "context_length": 8192,
+      "bandwidth_gbps": 8.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.25,
+        "avg_gold_recall_candidates": 0.0,
+        "avg_visible_count": 4.08,
+        "avg_latency_us": 376.98586663818355,
+        "avg_throughput_ratio": 2.1868113006484973,
+        "p99_latency_us": 477.6100692749022
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.28,
+        "avg_gold_recall_candidates": 0.0,
+        "avg_visible_count": 8.7,
+        "avg_latency_us": 622.6183828735352,
+        "avg_throughput_ratio": 1.3254382930954112,
+        "p99_latency_us": 742.5269241333007,
+        "avg_ghost_blocks": 7.58,
+        "aba_metrics": {
+          "mode_switches": 0,
+          "transparent_fraction": 0.0,
+          "hybrid_fraction": 1.0,
+          "aggressive_fraction": 0.0,
+          "compute_savings_flops": 0.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 50,
+          "total_chunks_scored": 200,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.48582178771477724,
+          "semantic_improvements": 41,
+          "avg_scoring_latency_us": 59.19456481933594,
+          "simhash_baseline_admits": 159,
+          "hes_additional_admits": 41,
+          "hes_lift_over_simhash": 0.2578616352201258
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 29,
+          "ghosts_promoted_to_real": 3,
+          "ghosts_evicted": 21,
+          "avg_ghost_confidence": 0.04325444475789648,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.1,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 50,
+          "avg_acceptance_rate": 0.6104678422356034,
+          "avg_evidence_quality": 0.0,
+          "drift_corrections": 0,
+          "promotion_overrides": 0,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 250,
+          "total_accepted_tokens": 126
+        }
+      },
+      "improvements": {
+        "recall_lift": 0.1200000000000001,
+        "throughput_lift": -0.39389452912450496,
+        "latency_reduction": -0.6515695626093596,
+        "visible_count_change": 4.619999999999999
+      }
+    },
+    "ctx_16384": {
+      "context_length": 16384,
+      "bandwidth_gbps": 8.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.25,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 7.0,
+        "avg_latency_us": 591.1537536621095,
+        "avg_throughput_ratio": 2.781533913963391,
+        "p99_latency_us": 674.736154937744
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.385,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 13.56,
+        "avg_latency_us": 941.5072981567382,
+        "avg_throughput_ratio": 1.7489911070545257,
+        "p99_latency_us": 1031.9118833312987,
+        "avg_ghost_blocks": 7.44,
+        "aba_metrics": {
+          "mode_switches": 0,
+          "transparent_fraction": 0.0,
+          "hybrid_fraction": 1.0,
+          "aggressive_fraction": 0.0,
+          "compute_savings_flops": 0.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 50,
+          "total_chunks_scored": 300,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.48306563532825064,
+          "semantic_improvements": 50,
+          "avg_scoring_latency_us": 75.65498352050781,
+          "simhash_baseline_admits": 250,
+          "hes_additional_admits": 50,
+          "hes_lift_over_simhash": 0.2
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 36,
+          "ghosts_promoted_to_real": 1,
+          "ghosts_evicted": 28,
+          "avg_ghost_confidence": 0.04281059998109897,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.1,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 50,
+          "avg_acceptance_rate": 0.6015511062795027,
+          "avg_evidence_quality": 0.017333333333333333,
+          "drift_corrections": 0,
+          "promotion_overrides": 3,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 250,
+          "total_accepted_tokens": 128
+        }
+      },
+      "improvements": {
+        "recall_lift": 0.54,
+        "throughput_lift": -0.37121345230610586,
+        "latency_reduction": -0.5926606104152106,
+        "visible_count_change": 6.5600000000000005
+      }
+    }
+  },
+  "4 GB/s (low BW / CXL saturated)": {
+    "ctx_4096": {
+      "context_length": 4096,
+      "bandwidth_gbps": 4.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.0,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 1.0,
+        "avg_latency_us": 200.89348907470708,
+        "avg_throughput_ratio": 2.054563718351697,
+        "p99_latency_us": 247.83333892822256
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.41,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 5.64,
+        "avg_latency_us": 449.24754559326175,
+        "avg_throughput_ratio": 0.923831630544218,
+        "p99_latency_us": 593.1227012634276,
+        "avg_ghost_blocks": 6.76,
+        "aba_metrics": {
+          "mode_switches": 1,
+          "transparent_fraction": 0.0,
+          "hybrid_fraction": 0.04,
+          "aggressive_fraction": 0.96,
+          "compute_savings_flops": 0.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 50,
+          "total_chunks_scored": 200,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.490350467570246,
+          "semantic_improvements": 30,
+          "avg_scoring_latency_us": 57.91664123535156,
+          "simhash_baseline_admits": 170,
+          "hes_additional_admits": 30,
+          "hes_lift_over_simhash": 0.17647058823529413
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 19,
+          "ghosts_promoted_to_real": 4,
+          "ghosts_evicted": 12,
+          "avg_ghost_confidence": 0.041332775091659814,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.1,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 50,
+          "avg_acceptance_rate": 0.5798499153272669,
+          "avg_evidence_quality": 0.026666666666666665,
+          "drift_corrections": 0,
+          "promotion_overrides": 22,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 250,
+          "total_accepted_tokens": 119
+        }
+      },
+      "improvements": {
+        "recall_lift": 41.0,
+        "throughput_lift": -0.5503514335951698,
+        "latency_reduction": -1.2362474147989846,
+        "visible_count_change": 4.64
+      }
+    },
+    "ctx_8192": {
+      "context_length": 8192,
+      "bandwidth_gbps": 4.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.25,
+        "avg_gold_recall_candidates": 0.0,
+        "avg_visible_count": 4.08,
+        "avg_latency_us": 376.1514016113281,
+        "avg_throughput_ratio": 2.197990418531661,
+        "p99_latency_us": 486.28135299682594
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.28,
+        "avg_gold_recall_candidates": 0.0,
+        "avg_visible_count": 8.7,
+        "avg_latency_us": 623.8724645996094,
+        "avg_throughput_ratio": 1.3254344376632732,
+        "p99_latency_us": 733.8627929687499,
+        "avg_ghost_blocks": 7.58,
+        "aba_metrics": {
+          "mode_switches": 1,
+          "transparent_fraction": 0.0,
+          "hybrid_fraction": 0.04,
+          "aggressive_fraction": 0.96,
+          "compute_savings_flops": 0.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 50,
+          "total_chunks_scored": 200,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.48582178771477724,
+          "semantic_improvements": 41,
+          "avg_scoring_latency_us": 58.727264404296875,
+          "simhash_baseline_admits": 159,
+          "hes_additional_admits": 41,
+          "hes_lift_over_simhash": 0.2578616352201258
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 29,
+          "ghosts_promoted_to_real": 3,
+          "ghosts_evicted": 21,
+          "avg_ghost_confidence": 0.04325444475789648,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.1,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 50,
+          "avg_acceptance_rate": 0.6104678422356034,
+          "avg_evidence_quality": 0.0,
+          "drift_corrections": 0,
+          "promotion_overrides": 0,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 250,
+          "total_accepted_tokens": 126
+        }
+      },
+      "improvements": {
+        "recall_lift": 0.1200000000000001,
+        "throughput_lift": -0.396978973844339,
+        "latency_reduction": -0.6585674330259388,
+        "visible_count_change": 4.619999999999999
+      }
+    },
+    "ctx_16384": {
+      "context_length": 16384,
+      "bandwidth_gbps": 4.0,
+      "baseline": {
+        "avg_gold_recall_visible": 0.25,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 7.0,
+        "avg_latency_us": 592.2933944702149,
+        "avg_throughput_ratio": 2.7833794988587006,
+        "p99_latency_us": 683.3311447143553
+      },
+      "innovation": {
+        "avg_gold_recall_visible": 0.385,
+        "avg_gold_recall_candidates": 0.5,
+        "avg_visible_count": 13.56,
+        "avg_latency_us": 944.4303099365234,
+        "avg_throughput_ratio": 1.7478835456151527,
+        "p99_latency_us": 1034.3294477233885,
+        "avg_ghost_blocks": 7.44,
+        "aba_metrics": {
+          "mode_switches": 1,
+          "transparent_fraction": 0.0,
+          "hybrid_fraction": 0.04,
+          "aggressive_fraction": 0.96,
+          "compute_savings_flops": 0.0,
+          "bandwidth_savings_bytes": 0.0,
+          "total_steps": 50
+        },
+        "hes_metrics": {
+          "total_queries": 50,
+          "total_chunks_scored": 300,
+          "admission_rate": 1.0,
+          "avg_admission_score": 0.48306563532825064,
+          "semantic_improvements": 50,
+          "avg_scoring_latency_us": 75.95539093017578,
+          "simhash_baseline_admits": 250,
+          "hes_additional_admits": 50,
+          "hes_lift_over_simhash": 0.2
+        },
+        "gbs_metrics": {
+          "sink_detection_rate": 1.0,
+          "ghosts_created": 36,
+          "ghosts_promoted_to_real": 1,
+          "ghosts_evicted": 28,
+          "avg_ghost_confidence": 0.04281059998109897,
+          "avg_reconstruction_quality": 0.0,
+          "attention_recovery_rate": 0.1,
+          "ghost_utilization": 1.0
+        },
+        "sdap_metrics": {
+          "total_steps": 50,
+          "avg_acceptance_rate": 0.6015511062795027,
+          "avg_evidence_quality": 0.017333333333333333,
+          "drift_corrections": 0,
+          "promotion_overrides": 3,
+          "compute_savings_ratio": 0.0,
+          "total_draft_tokens": 250,
+          "total_accepted_tokens": 128
+        }
+      },
+      "improvements": {
+        "recall_lift": 0.54,
+        "throughput_lift": -0.37202830360292,
+        "latency_reduction": -0.5945312217795071,
+        "visible_count_change": 6.5600000000000005
+      }
+    }
+  }
+}

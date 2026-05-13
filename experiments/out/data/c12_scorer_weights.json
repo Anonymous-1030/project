@@ -1,0 +1,20 @@
+{
+  "description": "The ODUS-X utility scorer is a linear combination of 5 per-chunk features.  Weights are deployment constants calibrated offline on a 10,000-step held-out trace.  They are not updated at runtime; their role is to turn the compact 64 B SE summary into a scalar verdict.",
+  "features": {
+    "c_temp": "Temporal recency. Computed from the layer-local last-access timestamp: c_temp = exp(-(t_now - t_last)/tau_temp), tau_temp = 32 decode steps.",
+    "c_struct": "Structural markers. Bitwise OR of {is_section_boundary, is_title_adjacent, is_code_block} recorded at chunking time, normalised to [0,1].",
+    "c_sem": "Semantic similarity. Dot product between the query sketch Project(Q_t, W_sketch) \u2208 R^32 and the chunk key-centroid (int8-packed in the SE summary), dequantised and tanh-scaled.",
+    "c_hist": "Historical-success rate. Sliding-window fraction of previous promotions that led to a commit, decayed with half-life 128 decode steps.",
+    "c_press": "Budget pressure. 1 - current_budget_used/total_budget.  This damps admissions when the Promotion Buffer is near-full."
+  },
+  "weights": {
+    "temp": 0.2,
+    "struct": 0.15,
+    "sem": 0.4,
+    "hist": 0.15,
+    "press": 0.1
+  },
+  "calibration": "Weights are fit by ridge regression on (feature, commit_success) pairs collected across 10k steps of mixed RULER + LongBench traces. Regularisation lambda = 1e-3, validated on a held-out 2k-step set.",
+  "calibration_thresholds_theta_l": "Per-layer admission thresholds theta_l are set so that the offline false-admit rate on held-out data is <= 5%. For Llama-3-70B we report theta_0..theta_79 in the supplementary JSON.",
+  "pressure_coefficients": "In the feasibility expression rho_l * (alpha + beta * util + gamma * RPE + delta * rho_meta), the coefficients are fit by linear regression on 16 operating points spanning 4-64 GB/s CXL and {512, 1024, 2048, 4096} candidates/step.  Fitted values: alpha=0.82, beta=0.91, gamma=1.07, delta=0.34."
+}

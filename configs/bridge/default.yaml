@@ -1,0 +1,226 @@
+# =============================================================================
+# ProSE-X v2 Bridge Configuration for vLLM Integration
+# =============================================================================
+# This file controls the prose_v2 ↔ vLLM bridge. All parameters are explicit
+# and documented. No magic constants are hidden in code.
+#
+# Usage:
+#   hook = integrate_with_vllm(llm, "configs/bridge/default.yaml")
+# =============================================================================
+
+version: "1.0.0"
+
+# ---------------------------------------------------------------------------
+# Bridge-specific settings
+# ---------------------------------------------------------------------------
+bridge:
+  # Master switch: set to false to disable all promotion (full attention)
+  enable_promotion: true
+
+  # Run the full promotion pipeline every N decode steps.
+  # On non-pipeline steps, reuses the previous promotion set with TTL decay.
+  # Set to 1 for per-step pipeline execution.
+  pipeline_run_every_n_steps: 1
+
+  # Fraction of chunks classified as "anchors" (always visible in attention).
+  # Anchors are the most recent chunks plus the first chunk (system prompt).
+  # Range: 0.0 to 1.0.  Higher = more chunks always visible = less sparsity.
+  anchor_ratio: 0.1
+
+  # Tokens per prose_v2 chunk. Must be divisible by vllm block_size (16).
+  chunk_size: 512
+
+  # Signature computation method for lexical overlap:
+  #   "ngram_hash" — SimHash over n-grams of token IDs (recommended)
+  signature_method: "ngram_hash"
+
+  # Number of recent tokens used to compute the query signature.
+  # Larger values capture more context but are slightly more expensive.
+  query_signature_window: 32
+
+  # Always use full attention during prefill (no promotion filtering).
+  # Strongly recommended to keep true — prefill needs full context.
+  prefill_always_full: true
+
+  # Hard cap on the number of promoted chunks per request.
+  # Prevents promotion from consuming too much attention compute.
+  max_promoted_chunks_per_request: 20
+
+  # Fall back to full attention if the promotion pipeline raises an error.
+  # Keep true for production; set false for debugging pipeline issues.
+  fallback_on_pipeline_error: true
+
+  # Track and log promoted memory statistics.
+  track_promoted_memory_bytes: true
+
+  # Log pipeline decisions (promotion/eviction) for each step.
+  # Set to true for debugging; false for production throughput.
+  log_pipeline_decisions: true
+
+# ---------------------------------------------------------------------------
+# ProSE-X v2 Pipeline Configuration
+# ---------------------------------------------------------------------------
+# These settings control the 5-stage promotion pipeline.
+# See prose_v2/src/config.py for full field documentation.
+# ---------------------------------------------------------------------------
+prosex:
+  version: "3.0.0"
+  chunk_size: 512
+  anchor_ratio: 0.1
+  tail_compression_ratio: 0.25
+  seed: 42
+  experiment_name: "vllm_bridge"
+  log_level: "INFO"
+  log_machine_readable: true
+  log_output_dir: "outputs/bridge_logs"
+
+  # Stage 1: Multi-Queue Recall ULF (candidate generation)
+  mqr_ulf:
+    mode: "multi_queue_recall"
+    anchor_neighbor_enabled: true
+    anchor_neighbor_radius: 2
+    anchor_neighbor_top_k: 2
+    lexical_overlap_enabled: true
+    lexical_overlap_method: "ngram_bloom"
+    lexical_overlap_top_k: 4
+    lexical_overlap_threshold: 0.0
+    lexical_overlap_timing_mode: "per_step"
+    structural_recency_enabled: true
+    structural_recent_top_k: 2
+    structural_boundary_top_k: 2
+    structural_title_adjacent_top_k: 2
+    structural_recency_window: 100
+    historical_success_enabled: true
+    historical_success_top_k: 2
+    historical_success_min_count: 1
+    max_total_candidates: 20
+    min_total_candidates: 1
+    dedup_method: "chunk_id"
+    ordering_method: "queue_priority"
+    log_per_queue_contribution: false
+    log_queue_overlap: false
+
+  # Stage 2: ODUS-X Adaptive Gating Scorer (no training, no oracle)
+  odus:
+    mode: "odus_x"
+    feature_use_query_summary: true
+    feature_use_chunk_summary: true
+    feature_use_anchor_distance: true
+    feature_use_lexical_overlap: true
+    feature_use_recent_usage: true
+    feature_use_structural_markers: true
+    feature_use_promoted_adjacency: true
+    mlp_hidden_dims: [64, 32]
+    mlp_activation: "relu"
+    mlp_dropout: 0.1
+    odus_weights_path: null
+    odus_embedding_dim: 128
+    odus_num_heads: 4
+    score_temperature: 1.0
+    score_calibration: "none"
+    assert_no_oracle_at_runtime: true
+    split_mode: "domain"
+    train_domains: []
+    test_domains: []
+
+  # Stage 3: Exploration-Aware Budget Scheduler
+  eabs:
+    exploration_ratio: 0.2
+    exploration_min_budget: 1
+    exploit_strategy: "top_k"
+    exploit_score_threshold: 0.5
+    exploration_strategy: "uncertainty"
+    exploration_uncertainty_method: "confidence_margin"
+    exploration_temperature: 1.0
+    max_chunks_per_step: 5
+    min_chunks_per_step: 0
+    budget_bytes: null
+    budget_ratio_of_tail: 0.05
+    min_score_threshold: 0.1
+    confidence_threshold: 0.5
+    enable_defensive_skip: true
+    skip_if_low_confidence: true
+    exploration_from_ulf_only: true
+    log_exploit_explore_split: false
+    log_rejection_reasons: false
+
+  # Stage 4 & 5: Burst Expansion + Sticky TTL
+  burst:
+    enabled: true
+    radius: 1
+    burst_selection: "contiguous"
+    sticky_enabled: true
+    default_ttl: 4
+    ttl_refresh_policy: "access"
+    ttl_refresh_max: 8
+    enable_ttl_decay: false
+    ttl_decay_rate: 0.9
+    log_burst_expansion: false
+    log_ttl_updates: false
+
+  # Metadata & sketches
+  metadata:
+    sketch_enabled: true
+    sketch_size: 256
+    sketch_method: "simhash"
+    track_section_boundaries: true
+    track_title_adjacent: true
+    track_code_blocks: true
+    track_promotion_success: true
+    track_access_patterns: true
+    history_window_size: 100
+    query_summary_tokens: 64
+    query_entity_extraction: false
+
+  # Offline training (not used by bridge; kept for config completeness)
+  offline_training:
+    trace_output_dir: "outputs/traces"
+    trace_format: "jsonl"
+    trace_steps_per_file: 1000
+    teacher_use_full_kv: true
+    teacher_future_attention_window: 10
+    teacher_correctness_delta: true
+    teacher_label_output_dir: "outputs/labels"
+    odus_train_epochs: 10
+    odus_train_lr: 0.0001
+    odus_train_batch_size: 32
+    odus_train_val_split: 0.1
+    odus_checkpoint_dir: "outputs/checkpoints"
+
+  # Evaluation (not used by bridge; kept for config completeness)
+  evaluation:
+    compute_candidate_metrics: true
+    compute_scoring_metrics: true
+    compute_scheduler_metrics: true
+    compute_promotion_metrics: true
+    compute_end_metrics: true
+    enable_failure_attribution: false
+    failure_attribution_depth: "basic"
+    latency_breakdown_components: ["ulf", "as", "scheduler", "burst", "sticky", "total"]
+    bandwidth_accounting_enabled: true
+    bandwidth_breakdown_by_tier: true
+    recovery_accounting_enabled: false
+    recovery_offline_only: true
+
+  # PPU hardware config (not used by bridge; kept for config completeness)
+  ppu:
+    enabled: false
+
+# ---------------------------------------------------------------------------
+# vLLM integration settings
+# ---------------------------------------------------------------------------
+vllm:
+  # vLLM block size (tokens per PagedAttention block). Must match vLLM's
+  # CacheConfig.block_size. Default: 16.
+  block_size: 16
+
+  # Disable CUDA graphs (required for dynamic block tables).
+  # When True, uses eager execution mode which supports variable-length
+  # block tables per step. Must be True for promotion filtering.
+  enforce_eager: true
+
+  # Disable vLLM prefix caching.
+  # Prefix caching conflicts with sparse attention because a block's
+  # content hash doesn't change, but its visibility (promoted vs not)
+  # varies per request and per step.
+  disable_prefix_caching: true

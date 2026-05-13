@@ -1,0 +1,8 @@
+# Ablation: PTB only (no PHT)
+# Tests the value of speculative prefetch without history-based prediction
+ppu:
+  pht_enabled: false
+  ptb_enabled: true
+  pht_as_5th_feature: false
+  ptb_speculative_prefetch: true
+experiment_name: "ablation_ptb_only"

@@ -1,0 +1,8 @@
+# Ablation: No PHT, No PTB (baseline PPU)
+# Standard 4-stage PPU without history or speculative prefetch
+ppu:
+  pht_enabled: false
+  ptb_enabled: false
+  pht_as_5th_feature: false
+  ptb_speculative_prefetch: false
+experiment_name: "ablation_no_pht_ptb"

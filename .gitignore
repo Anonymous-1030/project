@@ -1,17 +1,63 @@
-# Sync .project/sourceTexts/ folder (source text files)
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+*.manifest
+*.spec
 
-# Don't sync user-specific SQLite databases
-.project/*.sqlite
+# Virtual environments
+venv/
+env/
+.venv/
+.conda/
+miniconda3/
 
-# Don't sync SQLite auxiliary files
-.project/*.sqlite-wal
-.project/*.sqlite-shm
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.project/
+.qoder/
+.history/
+.claude/
 
-# Don't sync user-specific files
-.project/complete_drafts.txt
-.project/localProjectSettings.json
-.project/localProjectSwap.json
-copilot-messages.log
+# OS
+.DS_Store
+Thumbs.db
+
+# Models and large data
+models/
+archive/
+
+# Excluded from open-source
+vllm-main/
+outputs/
+temp_pdf_extract/
+PROSE/
+prose_v2/
+legacy/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# Hardware simulation outputs (large binaries)
+*.vvp
+*.vcd
 
 # Archive formats
 *.zip
@@ -24,26 +70,3 @@ copilot-messages.log
 *.gz
 *.bz2
 *.xz
-
-# Windows executables and installers
-*.exe
-*.msi
-*.bat
-*.cmd
-*.com
-*.scr
-*.dll
-
-# macOS executables and disk images
-*.dmg
-*.pkg
-
-# Disk images and virtual machine files
-*.iso
-*.img
-*.vhd
-*.vmdk
-
-# System files
-.DS_Store
-.project/attachments/files/**

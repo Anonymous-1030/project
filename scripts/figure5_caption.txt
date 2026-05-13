@@ -1,0 +1,6 @@
+Figure 5: PRESS formal evidence and failure boundaries.
+(a)~Invariant residuals between target regime (128K tokens) and solved subscale (32K); all physical and control invariants remain below the acceptance threshold~$\epsilon_r = 0.08$.
+(b)~Predictive validity via leave-one-policy-out cross-validation: subscale observations predict held-out policy recovery gaps with $R^2 = 0.94$ and Kendall~$\tau = 0.88$ ($n=24$).
+(c)~Policy-ordering preservation across workloads, quantified by Kendall~$\tau$; green cells ($\tau \ge 0.80$) indicate preserved ranking, red cells ($\tau < 0.65$) violation.
+(d)~Validity boundary: a policy margin $\Delta_m \ge 1.2\chi + 0.02$ above combined invariant mismatch~$\chi$ is required for PRESS projection to hold (green~=~valid, red~=~invalid, yellow~=~near boundary).
+(e)~Failure-mode matrix showing projection error amplification when individual invariants are perturbed in isolation. At Break intensity, $\rho_{\text{drift}}$ distortion induces control collapse (45$\times$ error amplification), while $\rho_{\text{queue}}$ saturation triggers a phase transition (50$\times$), demonstrating that PRESS validity depends on preserving \emph{both} pressure and control invariants.

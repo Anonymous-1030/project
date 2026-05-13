@@ -1,0 +1,205 @@
+# ProSE-X 2.0 Default Configuration
+# 
+# This is the default configuration for ProSE-X 2.0 experiments.
+# All parameters are explicit - no magic constants.
+
+version: "2.0.0"
+experiment_name: "default"
+seed: 42
+
+# Chunking configuration
+chunk_size: 512
+macro_chunk_size: 2048  # Transfer unit
+micro_chunk_size: 512   # Indexing unit
+
+# Retention hierarchy
+anchor_ratio: 0.1
+tail_compression_ratio: 0.25
+
+# MQR-ULF Configuration
+mqr_ulf:
+  mode: "multi_queue_recall"
+  
+  # Queue 1: Anchor-neighbor recall
+  anchor_neighbor_enabled: true
+  anchor_neighbor_radius: 2
+  anchor_neighbor_top_k: 5
+  
+  # Queue 2: Lexical/entity overlap recall
+  lexical_overlap_enabled: true
+  lexical_overlap_method: "hashed_token"
+  lexical_overlap_top_k: 5
+  lexical_overlap_threshold: 0.1
+  
+  # Queue 3: Structural/recency recall
+  structural_recency_enabled: true
+  structural_recent_top_k: 3
+  structural_boundary_top_k: 2
+  structural_title_adjacent_top_k: 2
+  structural_recency_window: 100
+  
+  # Queue 4: Historical-success recall
+  historical_success_enabled: true
+  historical_success_top_k: 3
+  historical_success_min_count: 1
+  
+  # Union and dedup
+  max_total_candidates: 20
+  min_total_candidates: 1
+  dedup_method: "chunk_id"
+  ordering_method: "queue_priority"
+  
+  # Logging
+  log_per_queue_contribution: true
+  log_queue_overlap: true
+
+# Burst-and-Stick Configuration
+burst:
+  # Burst expansion
+  enabled: true
+  radius: 1
+  burst_selection: "contiguous"
+  
+  # Sticky residency
+  sticky_enabled: true
+  default_ttl: 4
+  ttl_refresh_policy: "access"
+  ttl_refresh_max: 8
+  
+  # TTL decay
+  enable_ttl_decay: false
+  ttl_decay_rate: 0.9
+  
+  # Logging
+  log_burst_expansion: true
+  log_ttl_updates: true
+
+# ODUS Configuration
+odus:
+  mode: "odus_x"  # Adaptive gating — no training, no oracle
+  
+  # Feature configuration
+  feature_use_query_summary: true
+  feature_use_chunk_summary: true
+  feature_use_anchor_distance: true
+  feature_use_lexical_overlap: true
+  feature_use_recent_usage: true
+  feature_use_structural_markers: true
+  feature_use_promoted_adjacency: true
+  
+  # MLP architecture (for lightweight_feature_mlp mode)
+  mlp_hidden_dims: [64, 32]
+  mlp_activation: "relu"
+  mlp_dropout: 0.1
+  
+  # ODUS training
+  odus_weights_path: "outputs/odus_model.pt"
+  odus_embedding_dim: 128
+  odus_num_heads: 4
+  
+  # Scoring
+  score_temperature: 1.0
+  score_calibration: "none"
+  
+  # Runtime checks
+  assert_no_oracle_at_runtime: true
+
+# EABS Configuration
+eabs:
+  # Budget split
+  exploration_ratio: 0.2
+  exploration_min_budget: 1
+  
+  # Exploit strategy
+  exploit_strategy: "top_k"
+  exploit_score_threshold: 0.5
+  
+  # Exploration strategy
+  exploration_strategy: "uncertainty"
+  exploration_uncertainty_method: "confidence_margin"
+  exploration_temperature: 1.0
+  
+  # Constraints
+  max_chunks_per_step: 5
+  min_chunks_per_step: 0
+  budget_bytes: null
+  budget_ratio_of_tail: 0.05
+  
+  # Score thresholds
+  min_score_threshold: 0.3
+  confidence_threshold: 0.5
+  
+  # Defensive fallback
+  enable_defensive_skip: true
+  skip_if_low_confidence: true
+  
+  # Exploration scope
+  exploration_from_ulf_only: true
+  
+  # Logging
+  log_exploit_explore_split: true
+  log_rejection_reasons: true
+
+# Metadata Configuration
+metadata:
+  sketch_enabled: true
+  sketch_size: 256
+  sketch_method: "simhash"
+  
+  track_section_boundaries: true
+  track_title_adjacent: true
+  track_code_blocks: true
+  
+  track_promotion_success: true
+  track_access_patterns: true
+  history_window_size: 100
+  
+  query_summary_tokens: 64
+  query_entity_extraction: false
+
+# Offline Training Configuration
+offline_training:
+  trace_output_dir: "outputs/traces"
+  trace_format: "jsonl"
+  trace_steps_per_file: 1000
+  
+  teacher_use_full_kv: true
+  teacher_future_attention_window: 10
+  teacher_correctness_delta: true
+  teacher_label_output_dir: "outputs/labels"
+  
+  odus_train_epochs: 10
+  odus_train_lr: 0.0001
+  odus_train_batch_size: 32
+  odus_train_val_split: 0.1
+  odus_checkpoint_dir: "outputs/checkpoints"
+
+# Evaluation Configuration
+evaluation:
+  compute_candidate_metrics: true
+  compute_scoring_metrics: true
+  compute_scheduler_metrics: true
+  compute_promotion_metrics: true
+  compute_end_metrics: true
+  
+  enable_failure_attribution: true
+  failure_attribution_depth: "full"
+  
+  latency_breakdown_components:
+    - "ulf"
+    - "as"
+    - "scheduler"
+    - "burst"
+    - "sticky"
+    - "total"
+  
+  bandwidth_accounting_enabled: true
+  bandwidth_breakdown_by_tier: true
+  
+  recovery_accounting_enabled: true
+  recovery_offline_only: true
+
+# Logging Configuration
+log_level: "INFO"
+log_machine_readable: true
+log_output_dir: "outputs/logs"

@@ -1,0 +1,79 @@
+{
+  "tasks": [
+    "RULER-NIAH",
+    "RULER-multi-NIAH",
+    "LongBench-QA",
+    "LongBench-Summ"
+  ],
+  "full_residency": {
+    "RULER-NIAH": 0.78,
+    "RULER-multi-NIAH": 0.65,
+    "LongBench-QA": 0.72,
+    "LongBench-Summ": 0.68
+  },
+  "absolute": {
+    "Demand-CXL": [
+      0.1482,
+      0.10400000000000001,
+      0.15839999999999999,
+      0.1632
+    ],
+    "FTS-Quest": [
+      0.2808,
+      0.195,
+      0.29519999999999996,
+      0.2788
+    ],
+    "SW-PCM-host": [
+      0.5382,
+      0.36400000000000005,
+      0.46799999999999997,
+      0.42840000000000006
+    ],
+    "PROSE (CEFE)": [
+      0.6864,
+      0.5265000000000001,
+      0.6192,
+      0.5576
+    ],
+    "Oracle-PCM": [
+      0.7488,
+      0.611,
+      0.6983999999999999,
+      0.646
+    ]
+  },
+  "normalized": {
+    "Demand-CXL": [
+      0.19,
+      0.16,
+      0.22,
+      0.24
+    ],
+    "FTS-Quest": [
+      0.36,
+      0.3,
+      0.41,
+      0.41
+    ],
+    "SW-PCM-host": [
+      0.69,
+      0.56,
+      0.65,
+      0.63
+    ],
+    "PROSE (CEFE)": [
+      0.88,
+      0.81,
+      0.86,
+      0.82
+    ],
+    "Oracle-PCM": [
+      0.96,
+      0.94,
+      0.97,
+      0.95
+    ]
+  },
+  "methodology_note": "Absolute panel = normalized \u00d7 full-residency ceiling. The paper's original y-axis was normalized (Oracle = 1.00); this must be relabelled and accompanied by the absolute panel."
+}

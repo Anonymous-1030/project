@@ -1,0 +1,27 @@
+{
+  "description": "End-to-end timing is produced by two models running in lockstep.",
+  "cxl_side": {
+    "simulator": "SimCXL (HPCA-2026-validated)",
+    "parameters": {
+      "link_rate_gbs": "swept 2..64",
+      "intrinsic_meta_latency": "110 ns",
+      "payload_quantum_bytes": 65536,
+      "credit_pool": "M = 256 MetaRead + 64 payload",
+      "transaction_granularity": "64 B for MetaRead, 64 KB for payload"
+    }
+  },
+  "gpu_side": {
+    "simulator": "Analytical occupancy model (in-house, cross-validated against vLLM traces at 16K/64K/128K)",
+    "parameters": {
+      "decode_compute_us": "12000 (Llama-3-70B, 1 TP rank, 128K ctx)",
+      "decode_slack_us": "8000 (overlap window)",
+      "stream_concurrency_model": "M/M/c with c = # compute streams",
+      "L2_polling_penalty_miss_us": "0.35 per kernel launch (SW-PCM-GPU only)"
+    }
+  },
+  "calibration_manifest": {
+    "traces": "10k steps \u00d7 4 tasks \u00d7 {16K,32K,64K,128K} contexts",
+    "hash": "sha256 of concatenated JSONL traces, in c12_trace_hash.txt",
+    "deposited_at": "supplementary/traces/"
+  }
+}

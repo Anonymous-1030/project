@@ -1,0 +1,1280 @@
+{
+  "32 GB/s": {
+    "sea_recall_per_step": [
+      0.5,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875
+    ],
+    "hes_only_recall_per_step": [
+      0.25,
+      0.0,
+      0.375,
+      0.0,
+      0.375,
+      0.125,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.125,
+      0.125,
+      0.125,
+      0.0,
+      0.0,
+      0.125,
+      0.375,
+      0.375,
+      0.375,
+      0.125,
+      0.25,
+      0.5,
+      0.0,
+      0.0,
+      0.25,
+      0.125,
+      0.25,
+      0.25,
+      0.125,
+      0.125,
+      0.375,
+      0.125,
+      0.0,
+      0.0,
+      0.25,
+      0.125,
+      0.25,
+      0.5,
+      0.375,
+      0.125,
+      0.125,
+      0.25,
+      0.25
+    ],
+    "oracle_recall_per_step": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "states_per_step": [
+      {
+        "admitted": 16,
+        "speculative": 15,
+        "rejected": 85
+      },
+      {
+        "admitted": 16,
+        "speculative": 19,
+        "rejected": 81
+      },
+      {
+        "admitted": 16,
+        "speculative": 20,
+        "rejected": 80
+      },
+      {
+        "admitted": 16,
+        "speculative": 23,
+        "rejected": 77
+      },
+      {
+        "admitted": 16,
+        "speculative": 25,
+        "rejected": 75
+      },
+      {
+        "admitted": 16,
+        "speculative": 27,
+        "rejected": 73
+      },
+      {
+        "admitted": 16,
+        "speculative": 27,
+        "rejected": 73
+      },
+      {
+        "admitted": 16,
+        "speculative": 34,
+        "rejected": 66
+      },
+      {
+        "admitted": 16,
+        "speculative": 34,
+        "rejected": 66
+      },
+      {
+        "admitted": 16,
+        "speculative": 29,
+        "rejected": 71
+      },
+      {
+        "admitted": 16,
+        "speculative": 27,
+        "rejected": 73
+      },
+      {
+        "admitted": 16,
+        "speculative": 28,
+        "rejected": 72
+      },
+      {
+        "admitted": 16,
+        "speculative": 28,
+        "rejected": 72
+      },
+      {
+        "admitted": 16,
+        "speculative": 30,
+        "rejected": 70
+      },
+      {
+        "admitted": 16,
+        "speculative": 30,
+        "rejected": 70
+      },
+      {
+        "admitted": 16,
+        "speculative": 31,
+        "rejected": 69
+      },
+      {
+        "admitted": 16,
+        "speculative": 29,
+        "rejected": 71
+      },
+      {
+        "admitted": 16,
+        "speculative": 31,
+        "rejected": 69
+      },
+      {
+        "admitted": 16,
+        "speculative": 30,
+        "rejected": 70
+      },
+      {
+        "admitted": 16,
+        "speculative": 35,
+        "rejected": 65
+      },
+      {
+        "admitted": 16,
+        "speculative": 33,
+        "rejected": 67
+      },
+      {
+        "admitted": 16,
+        "speculative": 33,
+        "rejected": 67
+      },
+      {
+        "admitted": 16,
+        "speculative": 32,
+        "rejected": 68
+      },
+      {
+        "admitted": 16,
+        "speculative": 33,
+        "rejected": 67
+      },
+      {
+        "admitted": 16,
+        "speculative": 32,
+        "rejected": 68
+      },
+      {
+        "admitted": 16,
+        "speculative": 29,
+        "rejected": 71
+      },
+      {
+        "admitted": 16,
+        "speculative": 31,
+        "rejected": 69
+      },
+      {
+        "admitted": 16,
+        "speculative": 32,
+        "rejected": 68
+      },
+      {
+        "admitted": 16,
+        "speculative": 27,
+        "rejected": 73
+      },
+      {
+        "admitted": 16,
+        "speculative": 27,
+        "rejected": 73
+      },
+      {
+        "admitted": 16,
+        "speculative": 27,
+        "rejected": 73
+      },
+      {
+        "admitted": 16,
+        "speculative": 26,
+        "rejected": 74
+      },
+      {
+        "admitted": 16,
+        "speculative": 27,
+        "rejected": 73
+      },
+      {
+        "admitted": 16,
+        "speculative": 30,
+        "rejected": 70
+      },
+      {
+        "admitted": 16,
+        "speculative": 31,
+        "rejected": 69
+      },
+      {
+        "admitted": 16,
+        "speculative": 28,
+        "rejected": 72
+      },
+      {
+        "admitted": 16,
+        "speculative": 27,
+        "rejected": 73
+      },
+      {
+        "admitted": 16,
+        "speculative": 26,
+        "rejected": 74
+      },
+      {
+        "admitted": 16,
+        "speculative": 28,
+        "rejected": 72
+      },
+      {
+        "admitted": 16,
+        "speculative": 31,
+        "rejected": 69
+      },
+      {
+        "admitted": 16,
+        "speculative": 30,
+        "rejected": 70
+      },
+      {
+        "admitted": 16,
+        "speculative": 30,
+        "rejected": 70
+      },
+      {
+        "admitted": 16,
+        "speculative": 31,
+        "rejected": 69
+      },
+      {
+        "admitted": 16,
+        "speculative": 29,
+        "rejected": 71
+      },
+      {
+        "admitted": 16,
+        "speculative": 25,
+        "rejected": 75
+      },
+      {
+        "admitted": 16,
+        "speculative": 24,
+        "rejected": 76
+      },
+      {
+        "admitted": 16,
+        "speculative": 23,
+        "rejected": 77
+      },
+      {
+        "admitted": 16,
+        "speculative": 23,
+        "rejected": 77
+      },
+      {
+        "admitted": 16,
+        "speculative": 21,
+        "rejected": 79
+      },
+      {
+        "admitted": 16,
+        "speculative": 24,
+        "rejected": 76
+      }
+    ],
+    "sea_metrics": {
+      "total_steps": 50,
+      "promotions_from_speculation": 144,
+      "evictions_from_speculation": 88,
+      "total_speculated": 254,
+      "total_verified": 0,
+      "avg_convergence_steps": 4.022222222222222,
+      "speculation_promotion_rate": 0.5669291338582677,
+      "max_convergence_steps": 14
+    },
+    "config": {
+      "bw_gbps": 32.0,
+      "ctx_len": 65536,
+      "num_steps": 50,
+      "num_gold_chunks": 4
+    }
+  },
+  "8 GB/s": {
+    "sea_recall_per_step": [
+      0.5,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875,
+      0.875
+    ],
+    "hes_only_recall_per_step": [
+      0.25,
+      0.0,
+      0.375,
+      0.0,
+      0.375,
+      0.125,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.125,
+      0.125,
+      0.125,
+      0.0,
+      0.0,
+      0.125,
+      0.375,
+      0.375,
+      0.375,
+      0.125,
+      0.25,
+      0.5,
+      0.0,
+      0.0,
+      0.25,
+      0.125,
+      0.25,
+      0.25,
+      0.125,
+      0.125,
+      0.375,
+      0.125,
+      0.0,
+      0.0,
+      0.25,
+      0.125,
+      0.25,
+      0.5,
+      0.375,
+      0.125,
+      0.125,
+      0.25,
+      0.25
+    ],
+    "oracle_recall_per_step": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "states_per_step": [
+      {
+        "admitted": 16,
+        "speculative": 6,
+        "rejected": 94
+      },
+      {
+        "admitted": 16,
+        "speculative": 9,
+        "rejected": 91
+      },
+      {
+        "admitted": 16,
+        "speculative": 11,
+        "rejected": 89
+      },
+      {
+        "admitted": 16,
+        "speculative": 11,
+        "rejected": 89
+      },
+      {
+        "admitted": 16,
+        "speculative": 12,
+        "rejected": 88
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 16,
+        "rejected": 84
+      },
+      {
+        "admitted": 16,
+        "speculative": 17,
+        "rejected": 83
+      },
+      {
+        "admitted": 16,
+        "speculative": 15,
+        "rejected": 85
+      },
+      {
+        "admitted": 16,
+        "speculative": 15,
+        "rejected": 85
+      },
+      {
+        "admitted": 16,
+        "speculative": 14,
+        "rejected": 86
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 14,
+        "rejected": 86
+      },
+      {
+        "admitted": 16,
+        "speculative": 11,
+        "rejected": 89
+      },
+      {
+        "admitted": 16,
+        "speculative": 12,
+        "rejected": 88
+      },
+      {
+        "admitted": 16,
+        "speculative": 10,
+        "rejected": 90
+      },
+      {
+        "admitted": 16,
+        "speculative": 11,
+        "rejected": 89
+      },
+      {
+        "admitted": 16,
+        "speculative": 10,
+        "rejected": 90
+      },
+      {
+        "admitted": 16,
+        "speculative": 10,
+        "rejected": 90
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 15,
+        "rejected": 85
+      },
+      {
+        "admitted": 16,
+        "speculative": 16,
+        "rejected": 84
+      },
+      {
+        "admitted": 16,
+        "speculative": 15,
+        "rejected": 85
+      },
+      {
+        "admitted": 16,
+        "speculative": 16,
+        "rejected": 84
+      },
+      {
+        "admitted": 16,
+        "speculative": 16,
+        "rejected": 84
+      },
+      {
+        "admitted": 16,
+        "speculative": 15,
+        "rejected": 85
+      },
+      {
+        "admitted": 16,
+        "speculative": 15,
+        "rejected": 85
+      },
+      {
+        "admitted": 16,
+        "speculative": 14,
+        "rejected": 86
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 12,
+        "rejected": 88
+      },
+      {
+        "admitted": 16,
+        "speculative": 14,
+        "rejected": 86
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 11,
+        "rejected": 89
+      },
+      {
+        "admitted": 16,
+        "speculative": 14,
+        "rejected": 86
+      },
+      {
+        "admitted": 16,
+        "speculative": 14,
+        "rejected": 86
+      },
+      {
+        "admitted": 16,
+        "speculative": 10,
+        "rejected": 90
+      },
+      {
+        "admitted": 16,
+        "speculative": 8,
+        "rejected": 92
+      },
+      {
+        "admitted": 16,
+        "speculative": 8,
+        "rejected": 92
+      },
+      {
+        "admitted": 16,
+        "speculative": 9,
+        "rejected": 91
+      },
+      {
+        "admitted": 16,
+        "speculative": 10,
+        "rejected": 90
+      },
+      {
+        "admitted": 16,
+        "speculative": 11,
+        "rejected": 89
+      },
+      {
+        "admitted": 16,
+        "speculative": 11,
+        "rejected": 89
+      },
+      {
+        "admitted": 16,
+        "speculative": 11,
+        "rejected": 89
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 14,
+        "rejected": 86
+      },
+      {
+        "admitted": 16,
+        "speculative": 13,
+        "rejected": 87
+      },
+      {
+        "admitted": 16,
+        "speculative": 15,
+        "rejected": 85
+      },
+      {
+        "admitted": 16,
+        "speculative": 14,
+        "rejected": 86
+      }
+    ],
+    "sea_metrics": {
+      "total_steps": 50,
+      "promotions_from_speculation": 97,
+      "evictions_from_speculation": 33,
+      "total_speculated": 142,
+      "total_verified": 0,
+      "avg_convergence_steps": 2.6904761904761907,
+      "speculation_promotion_rate": 0.6830985915492958,
+      "max_convergence_steps": 10
+    },
+    "config": {
+      "bw_gbps": 8.0,
+      "ctx_len": 65536,
+      "num_steps": 50,
+      "num_gold_chunks": 4
+    }
+  },
+  "4 GB/s": {
+    "sea_recall_per_step": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.625,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "hes_only_recall_per_step": [
+      0.25,
+      0.0,
+      0.375,
+      0.0,
+      0.375,
+      0.125,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.125,
+      0.125,
+      0.125,
+      0.0,
+      0.0,
+      0.125,
+      0.375,
+      0.375,
+      0.375,
+      0.125,
+      0.25,
+      0.5,
+      0.0,
+      0.0,
+      0.25,
+      0.125,
+      0.25,
+      0.25,
+      0.125,
+      0.125,
+      0.375,
+      0.125,
+      0.0,
+      0.0,
+      0.25,
+      0.125,
+      0.25,
+      0.5,
+      0.375,
+      0.125,
+      0.125,
+      0.25,
+      0.25
+    ],
+    "oracle_recall_per_step": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "states_per_step": [
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 5,
+        "rejected": 95
+      },
+      {
+        "admitted": 16,
+        "speculative": 6,
+        "rejected": 94
+      },
+      {
+        "admitted": 16,
+        "speculative": 6,
+        "rejected": 94
+      },
+      {
+        "admitted": 16,
+        "speculative": 7,
+        "rejected": 93
+      },
+      {
+        "admitted": 16,
+        "speculative": 8,
+        "rejected": 92
+      },
+      {
+        "admitted": 16,
+        "speculative": 8,
+        "rejected": 92
+      },
+      {
+        "admitted": 16,
+        "speculative": 6,
+        "rejected": 94
+      },
+      {
+        "admitted": 16,
+        "speculative": 6,
+        "rejected": 94
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 2,
+        "rejected": 98
+      },
+      {
+        "admitted": 16,
+        "speculative": 1,
+        "rejected": 99
+      },
+      {
+        "admitted": 16,
+        "speculative": 2,
+        "rejected": 98
+      },
+      {
+        "admitted": 16,
+        "speculative": 2,
+        "rejected": 98
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 5,
+        "rejected": 95
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 2,
+        "rejected": 98
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 2,
+        "rejected": 98
+      },
+      {
+        "admitted": 16,
+        "speculative": 2,
+        "rejected": 98
+      },
+      {
+        "admitted": 16,
+        "speculative": 2,
+        "rejected": 98
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 3,
+        "rejected": 97
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 4,
+        "rejected": 96
+      },
+      {
+        "admitted": 16,
+        "speculative": 5,
+        "rejected": 95
+      }
+    ],
+    "sea_metrics": {
+      "total_steps": 50,
+      "promotions_from_speculation": 33,
+      "evictions_from_speculation": 10,
+      "total_speculated": 46,
+      "total_verified": 0,
+      "avg_convergence_steps": 2.56,
+      "speculation_promotion_rate": 0.717391304347826,
+      "max_convergence_steps": 9
+    },
+    "config": {
+      "bw_gbps": 4.0,
+      "ctx_len": 65536,
+      "num_steps": 50,
+      "num_gold_chunks": 4
+    }
+  }
+}
