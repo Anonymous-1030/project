@@ -172,16 +172,7 @@ cd experiments && python run_all.py
 - PyYAML >= 5.4
 - Matplotlib >= 3.5
 
-## Citation
 
-```bibtex
-@inproceedings{prosex2027,
-  title={PROSE-X: Copy-Engine Admission Control for CXL-Backed KV-Cache Promotion},
-  author={Anonymous},
-  booktitle={HPCA},
-  year={2027}
-}
-```
 
 ## License
 
